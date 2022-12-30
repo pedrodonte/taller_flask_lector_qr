@@ -1,5 +1,6 @@
 venv/
 avtallerflask/
+layers/
 
 *.pyc
 __pycache__/

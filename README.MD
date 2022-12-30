@@ -17,3 +17,15 @@ flask run
 python -m venv avtallerflask
 .\avtallerflask\Scripts\activate
 ```
+
+# Exportar Layer para Lambda
+
+```
+mkdir layers
+cd layers
+mkdir python
+cd python
+pip install -r ../../requeriments.txt -t .
+cd ..
+zip -r requests_layer.zip .
+```

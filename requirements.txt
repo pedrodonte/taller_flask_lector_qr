@@ -9,3 +9,4 @@ opencv-python==4.6.0.66
 Pillow==9.3.0
 pyzbar==0.1.9
 Werkzeug==2.2.2
+waitress==2.1.2

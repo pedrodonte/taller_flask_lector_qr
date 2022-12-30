@@ -1,0 +1,9 @@
+version: "3"
+services:
+  api-lector-qr:
+    container_name: servicio
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080

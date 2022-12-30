@@ -29,27 +29,9 @@ def create_app():
     app = Flask(__name__, instance_relative_config=True)
 
     # a simple page that says hello
-    @app.route('/hello')
+    @app.route('/')
     def hello():
-        return 'Hello, World! 2'
-
-    @app.route('/saludar/<nombre>')
-    def saludar_get(nombre):
-        return 'Hola, ' + nombre + '!'
-
-    @app.route('/saludar/json/<nombre>')
-    def saludar_get_json(nombre):
-
-        if nombre == 'Juan':
-            respuesta = {
-                "mensaje": 'No se puede saludar a Juan'
-            }
-            return respuesta, 400
-        else:
-            respuesta = {
-                "mensaje": 'Hola, ' + nombre + '!'
-            }
-            return respuesta
+        return {'mensaje': 'Lector QR - OK'}
 
     @app.route('/recibir-imagen', methods=['POST'])
     def recibir_imagen():
